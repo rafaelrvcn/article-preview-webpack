@@ -1,0 +1,141 @@
+body {
+    background-color:hsl(210, 46%, 95%);
+    width: 1440px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.preview-container {
+    display: grid;
+    grid-template-areas: "img-div preview";
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    box-shadow: 1px 1px 2px #0000002f;
+}
+
+.img-div {
+    width: 250px;
+    height: 250px;
+}
+
+.drawers {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.preview {
+    width: 320px;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.title-article {
+    font-size: 17px;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+}
+
+.p-article {
+    font-size: 12px;
+    color: hsl(214, 17%, 51%);
+    font-weight: 500;
+}
+
+.footer-preview {
+    display: grid;
+    grid-template-areas: "avatar author icon"
+                         "avatar date icon";
+    grid-template-columns: 20% 70% 10%;
+}
+
+.img-avatar {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+}
+
+.author {
+    color: hsl(217, 19%, 35%);
+    margin-left: -20px;
+    margin-top: 20px;
+}
+
+.date {
+    color: hsl(212, 23%, 69%);
+    font-size: 10px;
+    margin-top: -25px;
+    margin-left: -20px;
+}
+
+.icon-tooltip {
+    border-radius: 50%;
+    background-color: hsl(210, 46%, 95%);
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    visibility: hidden;
+    display: flex;
+    background-color: hsl(217, 19%, 35%);
+    color: #ffffff;
+    align-items: center;
+    align-content: space-around;
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: -72px;
+    width: 130px;
+    height: 25px;
+}
+
+.tooltip:after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid hsl(217, 19%, 35%);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    transform: rotate(180deg);
+}
+
+.icon-tooltip:hover .tooltip {
+    visibility: visible;
+    bottom: 30px;
+    left: 0;
+    z-index: 999;
+}
+
+.tooltip:hover {
+    visibility: visible;
+}
+
+.arrow-icon {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 2px;
+}
+
+.icons {
+    margin-left: 10px;
+}
+
+.disable {
+    pointer-events: none;
+    opacity: 0.5;
+}
